@@ -5,3 +5,23 @@
     font-size: 20px;
     font-weight: normal;
 }
+
+.h-200 {
+    height: 200px;
+  }
+  .bg-secondary {
+    background-color: #f3f5f7; /* Change to any color you want */
+  }
+  .counter-line {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff; /* Bootstrap primary color */
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+  

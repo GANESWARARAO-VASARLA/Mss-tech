@@ -34,7 +34,7 @@ function TeamMembers(){
                     <div className="col-md-4 mb-3">
                     <div className="card shadow-sm">
                 <div className="card-body">
-                    <img src={doc1} alt="" className="img-fluid" title="" loading="lazy" />
+                  <img src={doc1} alt="" className="img-fluid" style={{ height: '250px',width:'100%' }} title="" loading="lazy" />
                    <p className="doctor-name">Prince  Kiran Varma</p>
                    <p className="doctor-specialty">Documentation Engineer</p>
                    <Link to="/" className="btn btn-primary btn-block">Read More</Link>
@@ -44,7 +44,7 @@ function TeamMembers(){
                     <div className="col-md-4 mb-3">
                     <div className="card shadow-sm">
                 <div className="card-body">
-                    <img src={doc2} alt="" title="" className="img-fluid" loading="lazy" />
+                    <img src={doc2} alt="" title="" className="img-fluid" style={{ height: '250px',width:'100%' }} loading="lazy" />
                    <p className="doctor-name">Rakesh</p>
                    <p className="doctor-specialty">development, Marketing</p>
                    <Link to="/" className="btn btn-primary btn-block">Read More</Link>
@@ -54,7 +54,7 @@ function TeamMembers(){
                     <div className="col-md-4">
                     <div className="card shadow-sm">
                 <div className="card-body">
-                    <img src={doc3} alt="" title="" className="img-fluid" loading="lazy" />
+                    <img src={doc3} alt="" title="" className="img-fluid" style={{ height: '250px',width:'100%' }} loading="lazy" />
                    <p className="doctor-name">Geetha</p>
                    <p className="doctor-specialty">Jr. Manager</p>
                    <Link to="/" className="btn btn-primary btn-block">Read More</Link>

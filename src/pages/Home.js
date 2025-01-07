@@ -6,6 +6,9 @@ import "./index.css";
 import webImage from "../assets/img/Web Maintenance.png";
 import aboutImage from "../assets/img/mssImage.jpg";
 import globeImage from "../assets/img/vector-globe-icon.jpg";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import StatsBlock from "./StatsBlock";
+
 function Home() {
   return (
     <div>
@@ -23,7 +26,7 @@ function Home() {
                   Schedule a Free Consultaion
                 </Link>
                 <Link to="/" className="btn btn-primary two btn-lg">
-                  Over All Successfull Stories
+                Client Testimonials
                 </Link>
               </div>
             </div>
@@ -63,7 +66,21 @@ function Home() {
             </div>
           </div>
         </section>
-
+        <section>
+          <div className="container">
+         <StatsBlock/>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+          <h1
+                  className="wcu-section-heading text-center mt-5"
+                  style={{ fontWeight: "bold" }}
+                >
+                 Our Services
+                </h1>
+          </div>
+        </section>
         <section>
           <div className="wcu-section pt-5 pb-5" id="wcuSection">
             <div className="container">
@@ -168,10 +185,14 @@ function Home() {
             </div>
           </div>
         </section>
+        
       </main>
       <Footer />
+      
     </div>
   );
 }
 
 export default Home;
+
+
