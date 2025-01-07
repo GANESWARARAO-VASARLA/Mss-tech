@@ -15,7 +15,7 @@ function TeamMembers(){
             <section>
                      <div className="jumbotron d-flex flex-column justify-content-center">
                        <div className="container ">
-                       <div className="col-6 col-md-6 p-5">
+                       <div className="col-12 col-md-6 p-5">
                 <h1
                   className="wcu-section-heading mb-4"
                   style={{ fontWeight: "bold" }}
