@@ -26,7 +26,7 @@ function Home() {
                   Schedule a Free Consultaion
                 </Link>
                 <Link to="/" className="btn btn-primary two btn-lg">
-                Client Testimonials
+                 Overall Client Testimonials
                 </Link>
               </div>
             </div>
