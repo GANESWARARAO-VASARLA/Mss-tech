@@ -1,6 +1,4 @@
 # Getting Started with Create React App
-<img src="https://res.cloudinary.com/dwydkvzl6/image/upload/v1679220034/hero-img.jpg_kgybiw.jpg">
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Available Scripts
