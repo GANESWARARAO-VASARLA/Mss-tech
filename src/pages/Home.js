@@ -6,8 +6,10 @@ import "./index.css";
 import webImage from "../assets/img/Web Maintenance.png";
 import aboutImage from "../assets/img/mssImage.jpg";
 import globeImage from "../assets/img/vector-globe-icon.jpg";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import StatsBlock from "./StatsBlock";
+import Ourservices from "./Ourservices";
+import ClientTestimonils from "./ClientTestimonils";
 
 function Home() {
   return (
@@ -26,7 +28,7 @@ function Home() {
                   Schedule a Free Consultaion
                 </Link>
                 <Link to="/" className="btn btn-primary two btn-lg">
-                 Overall Client Testimonials
+                  Overall Client Testimonials
                 </Link>
               </div>
             </div>
@@ -66,23 +68,10 @@ function Home() {
             </div>
           </div>
         </section>
+        <StatsBlock />
+        <Ourservices/>
         <section>
-          <div className="container">
-         <StatsBlock/>
-          </div>
-        </section>
-        <section>
-          <div className="container">
-          <h1
-                  className="wcu-section-heading text-center mt-5"
-                  style={{ fontWeight: "bold" }}
-                >
-                 Our Services
-                </h1>
-          </div>
-        </section>
-        <section>
-          <div className="wcu-section pt-5 pb-5" id="wcuSection">
+          <div className="wcu-section mt-5 pb-5" id="wcuSection">
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -128,6 +117,7 @@ function Home() {
             </div>
           </div>
         </section>
+        <ClientTestimonils/>
         <section>
           <div className="contact-page">
             <div className="container-fluid bg-dark text-white py-5 ps-5 contact-bg">
@@ -185,14 +175,10 @@ function Home() {
             </div>
           </div>
         </section>
-        
       </main>
       <Footer />
-      
     </div>
   );
 }
 
 export default Home;
-
-
