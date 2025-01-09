@@ -53,8 +53,6 @@ const ClientTestimonials = forwardRef((props, ref) => {
       chunkedTestimonials.push(testimonials);
     }
   }
-  console.log(chunkedTestimonials);
-
   return (
     <section>
       <div className="container" ref={ref}>
