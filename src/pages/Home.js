@@ -9,6 +9,7 @@ import StatsBlock from "./StatsBlock";
 import Ourservices from "./Ourservices";
 import ClientTestimonils from "./ClientTestimonils";
 import WhyChoose from "./WhyChoose";
+import Upskilss from "./Upskilss";
 
 function Home() {
   const clientTestimonialsRef = useRef(null);
@@ -24,7 +25,7 @@ function Home() {
   return (
     <div>
       <Navigation />
-      <main>
+      <main >
         <section>
           <div className="jumbotron d-flex flex-column justify-content-center">
             <div className="container ">
@@ -82,6 +83,7 @@ function Home() {
         </section>
         <StatsBlock />
         <Ourservices />
+        <Upskilss/>
         <WhyChoose />
         <ClientTestimonils ref={clientTestimonialsRef} />
         <section>
