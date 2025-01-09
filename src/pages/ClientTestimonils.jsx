@@ -45,11 +45,15 @@ const ClientTestimonials = forwardRef((props, ref) => {
     },
   ];
 
-  // Split testimonials into chunks of 3 for the carousel
   const chunkedTestimonials = [];
   for (let i = 0; i < testimonials.length; i += 3) {
-    chunkedTestimonials.push(testimonials.slice(i, i + 3));
+    if (testimonials.length > 3) {
+      chunkedTestimonials.push(testimonials.slice(i, i + 3));
+    } else {
+      chunkedTestimonials.push(testimonials);
+    }
   }
+  console.log(chunkedTestimonials);
 
   return (
     <section>
@@ -113,7 +117,7 @@ const ClientTestimonials = forwardRef((props, ref) => {
                                 src={testimonial.image}
                                 alt={testimonial.name}
                                 className="img-fluid rounded"
-                                style={{ height: "80px", width: "100%" }}
+                                style={{ height: "70px", width: "100%" }}
                                 loading="lazy"
                               />
                             </div>
