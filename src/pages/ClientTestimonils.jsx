@@ -1,44 +1,56 @@
 import React, { forwardRef } from "react";
-// import doc1 from "../assets/img/doc1.webp";
-// import doc2 from "../assets/img/doc2.webp";
-// import doc3 from "../assets/img/doc3.webp";
+import doc1 from "../assets/img/doc1.webp";
+import doc2 from "../assets/img/doc2.webp";
+import doc3 from "../assets/img/doc3.webp";
 import doc4 from "../assets/img/Women-in.webp";
 import doc5 from "../assets/img/rakesh.jpeg";
 import doc6 from "../assets/img/Women-in.webp";
 
-const ClientTestimonils = forwardRef((props, ref) => {
+const ClientTestimonials = forwardRef((props, ref) => {
   const testimonials = [
-    // {
-    //   name: "Hari Krishna Aldandi",
-    //   image: doc1,
-    //   text: "Hari Krishna Aldandi on securing the role of Java Developer at Digit Secure Private Limited, Hyderabad, with an impressive annual salary of 4.5 LPA."
-    // },
-    // {
-    //   name: "Ravi Kumar",
-    //   image: doc2,
-    //   text: "Ravi Kumar successfully transitioned to the role of Data Scientist at Tech Innovations Pvt. Ltd. With his strong background in mathematics and statistics..."
-    // },
-    // {
-    //   name: "Sita Rani",
-    //   image: doc3,
-    //   text: "Sita Rani secured a role as a Frontend Developer at Web Solutions Corp. after undergoing training and guidance from MSSTechnologies."
-    // },
+    {
+      name: "Hari Krishna Aldandi",
+      image: doc1,
+      text: "Hari krishna Aldandi on securing the role of Java Developer at Digit secure private limited, Hyderabad, with an impressive annual salary of 4.5 LPA. Despite originating from a IT background, Hari krishna accumulated two years of experience as a Java Developer. MSSTechnogies played a pivotal role in shaping Hari krishna's success full career transition.",
+    },
+    {
+      name: "Ravi Kumar",
+      image: doc2,
+      text: "Transitioned to a Data Scientist role at Tech Innovations Pvt. Ltd.",
+    },
+    {
+      name: "Sita Rani",
+      image: doc3,
+      text: "Secured a Frontend Developer role at Web Solutions Corp.",
+    },
     {
       name: "Amit Sharma",
       image: doc4,
-      text: "Amit Sharma successfully transitioned into the role of Full Stack Developer at Creative Studios. With a strong background in React and Node.js...",
+      text: "Became a Full Stack Developer at Creative Studios.",
     },
     {
       name: "Pooja Gupta",
       image: doc5,
-      text: "Pooja Gupta made a career shift from marketing to become a Software Engineer at SecureTech. MSSTechnologies provided the necessary tools...",
+      text: "Shifted from marketing to Software Engineer at SecureTech.",
     },
     {
       name: "Vijay Singh",
       image: doc6,
-      text: "Vijay Singh secured a Data Analyst position at DataWorx Inc. with a salary of 5.5 LPA, after a successful transition from a finance background.",
+      text: "Secured a Data Analyst role at DataWorx Inc. with 5.5 LPA.",
+    },
+    {
+      name: "Vijay Singh",
+      image: doc6,
+      text: "Secured a Data Analyst role at DataWorx Inc. with 5.5 LPA.",
     },
   ];
+
+  // Split testimonials into chunks of 3 for the carousel
+  const chunkedTestimonials = [];
+  for (let i = 0; i < testimonials.length; i += 3) {
+    chunkedTestimonials.push(testimonials.slice(i, i + 3));
+  }
+
   return (
     <section>
       <div className="container" ref={ref}>
@@ -48,36 +60,108 @@ const ClientTestimonils = forwardRef((props, ref) => {
         >
           Client Testimonials
         </h1>
-        <div className="row mb-3">
-          {testimonials.map((chunk, index) => (
-            <div className="col-md-4 col-12 mb-3" key={index}>
-              <div className="card shadow-sm">
-                <div className="card-body">
-                  <div className="d-flex flex-row">
-                    <div className="col-md-4">
-                      <img
-                        src={chunk.image}
-                        alt={chunk.name}
-                        className="img-fluid"
-                        style={{ height: "80px", width: "100%" }}
-                        loading="lazy"
-                      />
+
+        {/* Bootstrap Carousel */}
+        <div
+          id="carouselExampleIndicators"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <ol className="carousel-indicators">
+            {chunkedTestimonials.map((_, index) => (
+              <li
+                key={index}
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to={index}
+                className={index === 0 ? "active" : ""}
+              ></li>
+            ))}
+          </ol>
+
+          <div className="carousel-inner">
+            {chunkedTestimonials.map((chunk, index) => (
+              <div
+                key={index}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}
+              >
+                <div className="row mb-3 p-4">
+                  {chunk.map((testimonial, idx) => (
+                    <div className="col-md-4 col-12 mb-3" key={idx}>
+                      <div
+                        className="card shadow-sm"
+                        style={{
+                          height: "300px",
+                          transition:
+                            "transform 0.3s ease, box-shadow 0.3s ease",
+                          cursor: "pointer",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "scale(1.05)";
+                          e.currentTarget.style.boxShadow =
+                            "0 0 20px rgba(0, 0, 0, 0.2)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "scale(1)";
+                          e.currentTarget.style.boxShadow =
+                            "0 0 10px rgba(0, 0, 0, 0.1)";
+                        }}
+                      >
+                        <div className="card-body">
+                          <div className="d-flex flex-row">
+                            <div className="col-md-4">
+                              <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                className="img-fluid rounded"
+                                style={{ height: "80px", width: "100%" }}
+                                loading="lazy"
+                              />
+                            </div>
+                            <div className="col-md-8">
+                              <h5>{testimonial.name}</h5>
+                            </div>
+                          </div>
+                          <p className="mt-2">{testimonial.text}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="col-md-8">
-                      <h5 className="ps-2">{chunk.name}</h5>
-                    </div>
-                  </div>
-                  <p className="mt-2">{chunk.text}</p>
+                  ))}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <a
+            className="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+              style={{ filter: "invert(100%)" }}
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </a>
+
+          <a
+            className="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+              style={{ filter: "invert(100%)" }}
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </a>
         </div>
       </div>
     </section>
   );
 });
-ClientTestimonils.displayName = 'ClientTestimonils';
 
-
-export default ClientTestimonils;
+ClientTestimonials.displayName = "ClientTestimonials";
+export default ClientTestimonials;
