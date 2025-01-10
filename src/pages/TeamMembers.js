@@ -1,6 +1,4 @@
 import React from "react";
-import Navigation from "../layout/Navigation";
-import Footer from "../layout/Footer";
 import { Link } from "react-router-dom";
 import doc1 from "../assets/img/doc1.webp";
 import doc2 from "../assets/img/rakesh.jpeg";
@@ -9,8 +7,6 @@ import teamImage from "../assets/img/itHAPPYSMILE.jpg";
 
 function TeamMembers() {
   return (
-    <div>
-      <Navigation />
       <main>
         <section
           style={{
@@ -111,8 +107,6 @@ function TeamMembers() {
           </div>
         </div>
       </main>
-      <Footer />
-    </div>
   );
 }
 

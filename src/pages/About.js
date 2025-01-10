@@ -1,12 +1,7 @@
 import React from 'react';
-import Navigation from '../layout/Navigation';
-import Footer from '../layout/Footer';
 import aboutImage from "../assets/img/mssImage.jpg";
 function About(){
     return(
-        <div>
-            
-            <Navigation />
             <section  style={{
     backgroundColor: "#f8f9fa", // Light background color
   }}>
@@ -43,9 +38,6 @@ function About(){
             </div>
           </div>
         </section>
-
-            <Footer />
-        </div>
     );
 }
 

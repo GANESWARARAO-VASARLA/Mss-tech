@@ -165,5 +165,5 @@ const ClientTestimonials = forwardRef((props, ref) => {
   );
 });
 
-ClientTestimonials.displayName = "ClientTestimonials";
+ClientTestimonials.displayName = "Client Testimonials";
 export default ClientTestimonials;
