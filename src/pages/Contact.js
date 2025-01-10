@@ -80,7 +80,7 @@ const Contact = forwardRef((props, ref) => {
           </div>
         </div>
         <div className="d-block d-sm-none">
-          <div className="card shadow-lg" style={{ width: "400px" }}>
+          <div className="card shadow-lg">
             <div className="card-header border">
               <h5 className="text-center fw-bold">
                 Schedule a Free Consultation
